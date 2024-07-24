@@ -10,7 +10,7 @@
     <hr>
     <a href="/create">Add Your Message</a>
     <hr>
-    <% if (messages) %>
+    <% if (messages.length > 0) {%>
       <h3>Messages</h3>
       <ul>
         <% for (let x=0; x<messages.length; x++) { %>
@@ -22,7 +22,9 @@
 
         <% } %>
       </ul>
-
+    <% } else { %>
+          <li>No messages.</li>
+    <% } %>
 
   </body>
 </html>
