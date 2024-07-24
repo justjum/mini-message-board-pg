@@ -4,9 +4,5 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports = new Pool({
-    host: "localhost",
-    user: "jum",
-    database: "minimessageboard",
-    password: process.env.DATAPASS,
-    port: 5432
+    connectionString: process.env.POSTGRESS_URI || process.env.LOCALCONNECT 
 })
