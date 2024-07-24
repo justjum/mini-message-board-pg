@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    
+    <p>Are you sure you want to delete the below message?</p>
+    <p>Username: <%= message[0].username %></p>
+    <p>Message: <%= message[0].message %></p>
+    <form action="" method="post">
+        <input type="hidden" value=<%= message[0].id %> name='id'>
+        <button>Confirm</button>
+    </form>
+</body>
+</html>

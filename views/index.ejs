@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <hr>
+    <a href="/create">Add Your Message</a>
+    <hr>
+    <% if (messages) %>
+      <h3>Messages</h3>
+      <ul>
+        <% for (let x=0; x<messages.length; x++) { %>
+          <li>
+            <p>Username: <%= messages[x].username %></p>
+            <p>Message: <%= messages[x].message %></p>
+            <a href="/update">Update</a>
+            <a href="/delete/<%=messages[x].id%>">Delete</a>
+          </li>
+
+        <% } %>
+      </ul>
+
+
+  </body>
+</html>
